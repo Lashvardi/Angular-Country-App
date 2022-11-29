@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/api.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Country';
-}
+  searchText: any;
+
+
+  constructor(private api:ApiService){}
+
+
+
+  ngOnInit(){
+    this.api.getAllCountry().subscribe((res) => console.log(res));
+  }
+  }
+

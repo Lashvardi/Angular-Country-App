@@ -1,0 +1,53 @@
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+
+
+.card{
+    border: 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateX(1px);
+        transform: scale(101%);
+        transition: 150ms;
+    }
+    .card-body{
+        background-color: #2b3743;
+        color: #fff;
+        transition: 200ms;
+    }
+    &:hover{
+        .card-body{
+            background-color: #202931;
+        }
+    }
+    cursor: pointer;
+    .contnet{
+        h5,p{
+            font-size: 16px;
+            margin: 0;
+        }
+        span{
+            color: #6989a3;
+        }
+    }
+}
+
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+li{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    display: flex;
+}
+

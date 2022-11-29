@@ -1,0 +1,17 @@
+<div
+  [routerLink]="country.name"
+  class="card hoverable"
+  style="width: 18rem"
+>
+  <img class="card-img-top" [src]="country.flag" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">{{ country.name }}</h5>
+    <div class="contnet">
+      <h5 class="card-title">
+        <span>Population:</span> {{ country.population | number: "1.0" }}
+      </h5>
+      <p class="card-text"><span>Region:</span> {{ country.region }}</p>
+      <p class="card-text"><span>Capital:</span> {{ country.capital }}</p>
+    </div>
+  </div>
+</div>
