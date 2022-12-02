@@ -27,6 +27,7 @@
 
                 <div class="container">
                     <div class="row">
+                        <p><span>Border Countrys:</span></p>
                         <div class="col"  *ngIf="$borderCountry | async; let borders;">
                             <button  [routerLink]="'../'+borderCountry.name"  *ngFor="let borderCountry of borders"   type="button" class="knopka btn btn-secondary">{{borderCountry.name}}</button>
                     </div>
