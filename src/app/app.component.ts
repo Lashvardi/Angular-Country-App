@@ -17,7 +17,6 @@ export class AppComponent {
 
 
   ngOnInit(){
-    this.api.getAllCountry().subscribe((res) => console.log(res));
-  }
-  }
 
+  }
+  }

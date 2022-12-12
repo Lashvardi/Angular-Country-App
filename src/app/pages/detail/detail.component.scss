@@ -10,6 +10,8 @@
         .main_Content{
             display: flex;
             align-items: center;
+
+
         }
         .imgdiv{
             height: 60vh;
@@ -149,3 +151,26 @@
     width: 120px;
     height: 60px;
 }
+
+.image_box{
+    width: 100%;
+    border: solid 1px black;
+    height: 500px;
+}
+
+.geladzia{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+  .colorer{
+    color: #fff;
+  }
+
+  .foto{
+    width: 300px !important;
+    object-fit: cover;
+  }
