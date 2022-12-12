@@ -5,6 +5,7 @@
 <button [routerLink]="'../'" type="button" class="back btn btn-primary btn-lg">
   Back
 </button>
+<div class="separator">
 <div class="parent" *ngIf="$country | async; let country">
   <div class="center">
     <div class="main_Content">
@@ -67,7 +68,7 @@
                   type="button"
                   class="knopka btn btn-secondary"
                 >
-                  {{ borderCountry.name }}
+                  <a class="text-decoration-none colorer" href="{{ borderCountry.name }}">{{ borderCountry.name }}</a>
                 </button>
 
               </div>
@@ -77,16 +78,18 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5">
-      <h1 class="colorer">Photos</h1>
-      <div class="row">
-        <div *ngFor="let data of this.array" class="col d-flex mt-5">
-          <img class="foto  rounded col" [src]="data" alt="">
-      </div>
-      </div>
-  </div>
-  </div>
   
 </div>
+<div class="container mt-5">
+  <h1 class="colorer">Photos</h1>
+  <div class="row">
+    <div *ngFor="let data of this.array" class="col gia d-flex mt-5">
+      <img class="foto  rounded col" [src]="data" alt="">
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
 
 
