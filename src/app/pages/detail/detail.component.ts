@@ -47,7 +47,7 @@ throw new Error('Method not implemented.');
   
         
         this.data= this.api.getImage(res.name).subscribe((res) => {
-          console.log(res);
+          //console.log(res);
           JSON.stringify(this.getJsonValue)
           this.getJsonValue = res;
   
@@ -57,14 +57,14 @@ throw new Error('Method not implemented.');
             this.urls = url;
             this.array.push(this.urls);
           }
-          console.log(this.array)
+          //console.log(this.array)
 
 
         })
 
         if(JSON.stringify(res).includes("border"))
         {
-          console.log(res.flag)
+          //console.log(res.flag)
           console.log("has border")
           this.$borderCountry = this.api.GetFullCountry(res.borders)
         }else{
