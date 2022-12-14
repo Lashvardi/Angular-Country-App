@@ -6,90 +6,84 @@
   Back
 </button>
 <div class="separator">
-<div class="parent" *ngIf="$country | async; let country">
-  <div class="center">
-    <div class="main_Content">
-      <div class="imgdiv">
-        <img [src]="country.flag" alt="" />
-      </div>
-      <div class="info_side">
-        <div class="inner_info">
-          <h1 class="MainName">{{ country.name }}</h1>
-          <div class="spliter">
-            <div class="left">
-              <p>
-                <span>Native Name:</span>&nbsp;&nbsp;{{ country.nativeName }}
-              </p>
-              <p>
-                <span>Area:</span>&nbsp;&nbsp;{{
+  <div class="parent" *ngIf="$country | async; let country">
+    <div class="center">
+      <div class="main_Content">
+        <div class="imgdiv">
+          <img [src]="country.flag" alt="" />
+        </div>
+        <div class="info_side">
+          <div class="inner_info">
+            <h1 class="MainName">{{ country.name }}</h1>
+            <div class="spliter">
+              <div class="left">
+                <p>
+                  <span>Native Name:</span>&nbsp;&nbsp;{{ country.nativeName }}
+                </p>
+                <p>
+                  <span>Area:</span>&nbsp;&nbsp;{{
                   country.area | number : "1.0"
-                }}
-                KM<sup>2</sup>
-              </p>
-              <p>
-                <span>Population:</span>&nbsp;&nbsp;{{
+                  }}
+                  KM<sup>2</sup>
+                </p>
+                <p>
+                  <span>Population:</span>&nbsp;&nbsp;{{
                   country.population | number : "1.0"
-                }}
-              </p>
-              <p>
-                <span>Languages:</span>&nbsp;&nbsp;{{
+                  }}
+                </p>
+                <p>
+                  <span>Languages:</span>&nbsp;&nbsp;{{
                   country.languages[0].name
-                }}
-              </p>
-              <p><span>Region:</span>&nbsp;&nbsp;{{ country.region }}</p>
-              <p><span>Capital:</span>&nbsp;&nbsp;{{ country.capital }}</p>
-            </div>
-            <div class="right">
-              <p>
-                <span>Calling Code:</span>&nbsp;&nbsp;+{{
+                  }}
+                </p>
+                <p><span>Region:</span>&nbsp;&nbsp;{{ country.region }}</p>
+                <p><span>Capital:</span>&nbsp;&nbsp;{{ country.capital }}</p>
+              </div>
+              <div class="right">
+                <p>
+                  <span>Calling Code:</span>&nbsp;&nbsp;+{{
                   country.callingCodes
-                }}
-              </p>
-              <p>
-                <span>Top Level Domain:</span>&nbsp;&nbsp;{{
+                  }}
+                </p>
+                <p>
+                  <span>Top Level Domain:</span>&nbsp;&nbsp;{{
                   country.topLevelDomain
-                }}
-              </p>
-              <p>
-                <span>Currency:</span>&nbsp;&nbsp;{{
+                  }}
+                </p>
+                <p>
+                  <span>Currency:</span>&nbsp;&nbsp;{{
                   country.currencies[0].name
-                }},&nbsp;{{ country.currencies[0].symbol }}
-              </p>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <p><span>Border Countrys:</span></p>
-              <div class="col" *ngIf="$borderCountry | async; let borders">
-                <button
-                  [routerLink]="'../' + borderCountry.name"
-                  *ngFor="let borderCountry of borders"
-                  type="button"
-                  class="knopka btn btn-secondary"
-                >
-                  <a class="text-decoration-none colorer" href="{{ borderCountry.name }}">{{ borderCountry.name }}</a>
-                </button>
-
+                  }},&nbsp;{{ country.currencies[0].symbol }}
+                </p>
               </div>
             </div>
-            
+
+            <div class="container">
+              <div class="row">
+                <p><span>Border Countrys:</span></p>
+                <div class="col coller" *ngIf="$borderCountry | async; let borders">
+                  <button [routerLink]="'../' + borderCountry.name" *ngFor="let borderCountry of borders" type="button"
+                    class="knopka btn btn-secondary">
+                    <a class="text-decoration-none colorer" href="{{ borderCountry.name }}">{{ borderCountry.name }}</a>
+                  </button>
+
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  
-</div>
-<div class="container mt-5">
-  <h1 class="colorer">Photos</h1>
-  <div class="row">
-    <div *ngFor="let data of this.array" class="col gia d-flex mt-5">
-      <img class="foto  rounded col" [src]="data" alt="">
+    <div class="diver">
+      <div class="container gialo d-flex flex-column mt-5">
+        <h1 class="colorer">Photos</h1>
+        <div class="row kairaa">
+          <div *ngFor="let data of this.array" class="col gia d-flex mt-5">
+            <img class="foto rounded col" [src]="data" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
 </div>
-</div>
-</div>
-
-
-
