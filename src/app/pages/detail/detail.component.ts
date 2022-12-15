@@ -35,6 +35,7 @@ throw new Error('Method not implemented.');
   constructor(private api:ApiService, private route:ActivatedRoute, private sanitizer:DomSanitizer) { }
 
   mytrusdetUrl: any;
+  myFlag: any;
   
 
   ngOnInit(): void {
@@ -44,13 +45,11 @@ throw new Error('Method not implemented.');
       .pipe(tap((res)=> res),
       mergeMap(res =>{
         JSON.stringify(res)
-  
         
         this.data= this.api.getImage(res.name).subscribe((res) => {
           //console.log(res);
           JSON.stringify(this.getJsonValue)
           this.getJsonValue = res;
-  
           for (let i = 0; i < 20; i++) {
             let url = this.getJsonValue.hits[i].largeImageURL;
             this.mytrusdetUrl = this.sanitizer.bypassSecurityTrustUrl(url)

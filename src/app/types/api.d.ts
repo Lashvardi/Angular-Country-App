@@ -21,6 +21,9 @@ export interface Welcome {
     languages:      Language[];
     translations:   Translations;
     flag:            string[];
+    flags:            string[];
+    Png:            string;
+    giaaa:            string;
     regionalBlocs:  RegionalBloc[];
     cioc:           string;
     independent:    boolean;
