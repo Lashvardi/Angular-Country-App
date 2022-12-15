@@ -46,7 +46,7 @@ throw new Error('Method not implemented.');
       mergeMap(res =>{
         JSON.stringify(res)
         
-        this.data= this.api.getImage(res.name).subscribe((res) => {
+        this.data= this.api.getImage(res.name,res.capital).subscribe((res) => {
           //console.log(res);
           JSON.stringify(this.getJsonValue)
           this.getJsonValue = res;

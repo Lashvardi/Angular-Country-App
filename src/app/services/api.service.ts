@@ -23,8 +23,8 @@ export class ApiService {
     return this.http.get<Currency[]>(this.api2);
   }
 
-  getImage(name : any){
-    return this.http.get(`${this.imageApi}${name}&image_type=photo&pretty=true`)
+  getImage(name : any, capital: any){
+    return this.http.get(`${this.imageApi}${capital}+${name}&image_type=photo&pretty=true`)
   }
 
 
