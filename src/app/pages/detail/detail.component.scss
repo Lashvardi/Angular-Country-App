@@ -83,6 +83,7 @@
             .knopka{
                 margin: 5px;
                 background-color: #3b4b5c;
+                padding: 5px 0px !important;
                 font-size: 11px;
                 &:hover{
                     background-color: #4b6884;
@@ -202,4 +203,8 @@
         transform: scale(2.1);
 
     }
+  }
+
+  .colorer{
+    padding: 7px 17px !important;
   }
