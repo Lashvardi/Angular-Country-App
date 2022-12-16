@@ -24,7 +24,7 @@ export class ApiService {
   }
 
   getImage(name : any, capital: any){
-    return this.http.get(`${this.imageApi}${capital}+${name}&image_type=photo&pretty=true`)
+    return this.http.get(`${this.imageApi}${capital}+${name}&image_type=photo&pretty=false`)
   }
 
 
