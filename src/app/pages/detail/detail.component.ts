@@ -30,8 +30,14 @@ throw new Error('Method not implemented.');
   $borderCountry: Observable<Welcome[]>;
   data: any;
   urls: any;
+  gialo: any;
+  Degree: any;
+  trusdetDegree: any;
   array : string[] = [];
+  RoundedTemp:any;
+  WaetherArray : string[] = [];
   public getJsonValue: any;
+  public aigeamindi:any;
   constructor(private api:ApiService, private route:ActivatedRoute, private sanitizer:DomSanitizer) { }
 
   mytrusdetUrl: any;
@@ -43,9 +49,10 @@ throw new Error('Method not implemented.');
     this.route.params.subscribe(params =>{
       this.$country = this.api.GetcountryByname(params.Country)
       .pipe(tap((res)=> res),
+      
       mergeMap(res =>{
         JSON.stringify(res)
-        
+
         this.data= this.api.getImage(res.name,res.capital).subscribe((res) => {
           //console.log(res);
           JSON.stringify(this.getJsonValue)
@@ -57,10 +64,7 @@ throw new Error('Method not implemented.');
             this.array.push(this.urls);
           }
           //console.log(this.array)
-
-
         })
-
         if(JSON.stringify(res).includes("border"))
         {
           //console.log(res.flag)
@@ -70,8 +74,18 @@ throw new Error('Method not implemented.');
           console.log("No Borders")
         }
 
+        this.Degree = this.api.getWeather(res.capital).subscribe((gialo) => {
+          console.log(gialo);
+          this.aigeamindi = gialo;
+
+          this.RoundedTemp = Math.round(this.aigeamindi.main.temp);
+        })
+
         return of(res)
+        
       }))
+
+      
     })
     
   }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Currency, Welcome } from '../types/api';
+import { Currency,Weather, Welcome } from '../types/api';
 import { map, Observable, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class ApiService {
   private api2 ="https://restcountries.com/v2/"
   private apicountry = `https://restcountries.com/v2/name/usa?fields=flags`
   private imageApi =`https://pixabay.com/api/?key=24616553-a93f502e67608fa7b8aece2d1&q=`
-  
+  private weather = `https://api.openweathermap.org/data/2.5/weather?q=`
+  private WeatherAPI = `628a4d5346bc875580165e833080440f`
   constructor(private http: HttpClient) {}
 
   getAllCountry(){
@@ -25,6 +26,10 @@ export class ApiService {
 
   getImage(name : any, capital: any){
     return this.http.get(`${this.imageApi}${capital}+${name}&image_type=photo&pretty=false`)
+  }
+
+  getWeather(capital: any){
+    return this.http.get<Weather[]>(`${this.weather}${capital}+&units=metric&appid=${this.WeatherAPI}`)
   }
 
 

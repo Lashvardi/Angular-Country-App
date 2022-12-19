@@ -1,5 +1,4 @@
 <app-nav></app-nav>
-<link *ngIf="$country | async; let country;" rel="icon"  href="{{country}}" type="images/svg+xml"> -->
 
 <button [routerLink]="'../'" type="button" class="back btn btn-primary btn-lg">
   Back
@@ -54,6 +53,7 @@
                   country.currencies[0].name
                   }},&nbsp;{{ country.currencies[0].symbol }}
                 </p>
+                <p style="width:200px" *ngIf="country.capital"><span>weather In</span> &nbsp;{{ country.capital }}&nbsp;{{ RoundedTemp | json }}&#8451;</p>
               </div>
             </div>
 
