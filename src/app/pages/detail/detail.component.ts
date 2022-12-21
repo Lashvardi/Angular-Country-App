@@ -31,6 +31,7 @@ throw new Error('Method not implemented.');
   data: any;
   urls: any;
   gialo: any;
+  levani = `https://en.wikipedia.org/wiki/`;
   Degree: any;
   trusdetDegree: any;
   array : string[] = [];
@@ -42,17 +43,22 @@ throw new Error('Method not implemented.');
 
   mytrusdetUrl: any;
   myFlag: any;
+
+
+  Wikipedia: any;
   
 
   ngOnInit(): void {
     
     this.route.params.subscribe(params =>{
       this.$country = this.api.GetcountryByname(params.Country)
+      
       .pipe(tap((res)=> res),
+
+      
       
       mergeMap(res =>{
         JSON.stringify(res)
-
         this.data= this.api.getImage(res.name,res.capital).subscribe((res) => {
           //console.log(res);
           JSON.stringify(this.getJsonValue)
@@ -80,7 +86,6 @@ throw new Error('Method not implemented.');
 
           this.RoundedTemp = Math.round(this.aigeamindi.main.temp);
         })
-
         return of(res)
         
       }))

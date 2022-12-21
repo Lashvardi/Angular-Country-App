@@ -5,6 +5,7 @@ import { map, Observable, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   private api = "https://restcountries.com/v2/all"
   private api2 ="https://restcountries.com/v2/"
