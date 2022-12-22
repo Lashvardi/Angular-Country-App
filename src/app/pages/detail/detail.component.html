@@ -53,7 +53,17 @@
                   country.currencies[0].name
                   }},&nbsp;{{ country.currencies[0].symbol }}
                 </p>
-                <p style="width:200px" *ngIf="country.capital"><span>weather In</span> &nbsp;{{ country.capital }}&nbsp;{{ RoundedTemp | json }}&#8451;</p>
+                <p style="width:200px" *ngIf="country.capital"><span>weather In</span> &nbsp;{{ country.capital
+                  }}&nbsp;{{ RoundedTemp | json }}&#8451;</p>
+                  
+                <a target="_blank" [href]="levani+country.name">
+                  <button class="knopka axalibtn btn btn-secondary">
+
+                    <a class="Wiki text-decoration-none" target="_blank" [href]="levani+country.name">Read Wikipedia
+                      Articel About {{country.name}}</a>
+
+                  </button>
+                </a>
               </div>
             </div>
 
