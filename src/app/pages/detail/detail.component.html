@@ -1,8 +1,8 @@
 <app-nav></app-nav>
-
 <button [routerLink]="'../'" type="button" class="back btn btn-primary btn-lg">
   Back
 </button>
+
 <div class="separator">
   <div class="parent" *ngIf="$country | async; let country">
     <div class="center">
@@ -60,7 +60,7 @@
                   <button class="knopka axalibtn btn btn-secondary">
 
                     <a class="Wiki text-decoration-none" target="_blank" [href]="levani+country.name">Read Wikipedia
-                      Articel About {{country.name}}</a>
+                      Article About {{country.name}}</a>
 
                   </button>
                 </a>
