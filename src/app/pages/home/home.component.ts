@@ -10,12 +10,15 @@ import { outputAst } from '@angular/compiler';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-$countries: Observable<Welcome[]>;
-searchValue: string = '';
+  source: Welcome[];
+  searcFilter: string;
+
   constructor(private api:ApiService) { }
-  searchtext:string = '';
+
   ngOnInit(): void {
-    this.$countries = this.api.getAllCountry();
+    this.api.getAllCountry().subscribe(countries => {
+      this.source = countries;
+    });
   }
 
 }

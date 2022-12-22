@@ -38,7 +38,7 @@ throw new Error('Method not implemented.');
   RoundedTemp:any;
   WaetherArray : string[] = [];
   public getJsonValue: any;
-  public aigeamindi:any;
+  public aigeamindi:any; 
   constructor(private api:ApiService, private route:ActivatedRoute, private sanitizer:DomSanitizer) { }
 
   mytrusdetUrl: any;

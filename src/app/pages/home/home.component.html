@@ -1,12 +1,14 @@
-<app-nav></app-nav> 
+<app-nav></app-nav>
 
 <div class="filter">
 </div>
 <div class="container " >
     <div class="row"  >  
-            <app-country-card  class="col d-flex mt-5"  *ngFor="let country of $countries | async"
-            [country]="country">
+            <app-country-card  class="col d-flex mt-5"  
+            *ngFor="let country of source">
+            [country]="country"
             </app-country-card>
     </div>
 </div>
+
 
