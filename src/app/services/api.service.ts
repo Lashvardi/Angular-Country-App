@@ -8,7 +8,7 @@ import { map, Observable, throwError } from 'rxjs';
 
 export class ApiService {
   private api = "https://restcountries.com/v2/all"
-  private api2 ="https://restcountries.com/res/v2/"
+  private api2 ="https://restcountries.com/v2/"
   private apicountry = `https://restcountries.com/v2/name/usa?fields=flags`
   private imageApi =`https://pixabay.com/api/?key=24616553-a93f502e67608fa7b8aece2d1&q=`
   private weather = `https://api.openweathermap.org/data/2.5/weather?q=`
