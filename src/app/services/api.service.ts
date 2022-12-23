@@ -16,7 +16,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getAllCountry(){
-    return this.http.get<Welcome[]>(`${this.api2}/all`);
+    return this.http.get<Welcome[]>(this.api);
   }
 
 
