@@ -55,8 +55,7 @@ throw new Error('Method not implemented.');
       
       .pipe(tap((res)=> res),
 
-      
-      
+    
       mergeMap(res =>{
         JSON.stringify(res)
         this.data= this.api.getImage(res.name,res.capital).subscribe((res) => {
