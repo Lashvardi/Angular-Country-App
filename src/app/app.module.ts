@@ -13,7 +13,6 @@ import { CountryCardComponent } from './component/country-card/country-card.comp
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './navbar/nav/nav.component';
 import { FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
-import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { ProfileComponent } from './profile/profile.component';
     DetailComponent,
     CountryCardComponent,
     NavComponent,
-    ProfileComponent,
   ],
   imports: [
     BrowserModule,
