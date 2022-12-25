@@ -41,7 +41,7 @@ import { ProfileComponent } from './profile/profile.component';
         providers: [
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('4529908110467414')
+            provider: new FacebookLoginProvider('1180307352897129')
           }
         ],
         onError: (err) => {
@@ -53,3 +53,4 @@ import { ProfileComponent } from './profile/profile.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

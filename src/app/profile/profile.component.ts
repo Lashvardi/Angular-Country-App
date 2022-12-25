@@ -16,6 +16,8 @@ export class ProfileComponent implements OnInit {
       this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
     }
 
+    
+
     user: any;
     loggedIn: any;
     ngOnInit() {
@@ -25,4 +27,6 @@ export class ProfileComponent implements OnInit {
         this.loggedIn = (user != null);
       });
     }
+    
 }
+
