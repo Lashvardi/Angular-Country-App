@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
       console.log(this.user)
       this.loggedIn = (user != null);
       if(this.loggedIn == true){
-        console.log("Shevida e kargmotynuli")
+        console.log("logged in")
       }
     });
 
