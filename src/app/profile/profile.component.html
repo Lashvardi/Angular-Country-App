@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div class="cent">
+    <button *ngIf="!loggedIn" (click)="signInWithFB()" class="btn btn-primary"><i class="bi bi-facebook"></i> Sign In With Fb</button>
+
+    <div class="Person_class" *ngIf="loggedIn">
+        <img class="rounded-circle mb-2" src="{{ user.photoUrl }}">
+        <div>
+            <h4>{{ user.firstName }}</h4>
+            <h4>{{ user.lastName }}</h4>
+        </div>
+    </div>
+</div>

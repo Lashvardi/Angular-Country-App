@@ -25,4 +25,11 @@
       margin: 0;
     }
   }
+  .divider{
+    display: flex;
+    align-items: center;
+    .Profile{
+      margin-right: 80px;
+    }
+  }
 }

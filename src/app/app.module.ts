@@ -13,6 +13,7 @@ import { CountryCardComponent } from './component/country-card/country-card.comp
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './navbar/nav/nav.component';
 import { FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } fro
     DetailComponent,
     CountryCardComponent,
     NavComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } fro
         providers: [
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('1180307352897129')
+            provider: new FacebookLoginProvider('469175398715653')
           }
         ],
         onError: (err) => {

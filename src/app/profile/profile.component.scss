@@ -1,0 +1,21 @@
+*{
+    color: #fff;
+}
+
+.cent{
+    display: flex;
+    align-items: center !important;
+    height: 40vh !important;
+    justify-content: center;
+    .Person_class{
+        border: solid 2px black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+        width: 200px;
+    }
+}
