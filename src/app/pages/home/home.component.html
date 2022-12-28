@@ -1,10 +1,9 @@
 <app-nav></app-nav>
 
-<div class="filter">
-</div>
-<div class="container " >
+
+<div class="container d-flex align-items-center " >
     <div class="row"  >  
-        <app-country-card  class="col d-flex mt-5"  *ngFor="let country of $countries | async"
+        <app-country-card  class="d-flex col p-0 mt-5"  *ngFor="let country of $countries | async"
         [country]="country">
         </app-country-card>
     </div>
