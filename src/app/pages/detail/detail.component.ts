@@ -63,7 +63,7 @@ throw new Error('Method not implemented.');
           //console.log(res);
           JSON.stringify(this.getJsonValue)
           this.getJsonValue = res;
-          for (let i = 0; i < 10; i++) {
+          for (let i = 0; i < 20; i++) {
             let url = this.getJsonValue.hits[i].largeImageURL;
             this.mytrusdetUrl = this.sanitizer.bypassSecurityTrustUrl(url)
             this.urls = url;
