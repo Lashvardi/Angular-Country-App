@@ -3,7 +3,7 @@ import { HttpParams } from '@angular/common/http';
 import { Component, OnInit, Sanitizer } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter, merge, mergeMap, Observable, observable, of, tap } from 'rxjs';
-
+import * as moment from 'moment-timezone';
 import { ApiService } from 'src/app/services/api.service';
 import { Welcome } from 'src/app/types/api';
 import { Pipe, PipeTransform } from '@angular/core';
@@ -25,12 +25,15 @@ throw new Error('Method not implemented.');
 }
 
 
+
+
   $country: Observable<Welcome>;
   trusted: any;
   $borderCountry: Observable<Welcome[]>;
   data: any;
   urls: any;
   gialo: any;
+  public timer:any;
   levani = `https://en.wikipedia.org/wiki/`;
   Degree: any;
   trusdetDegree: any;
@@ -60,7 +63,6 @@ throw new Error('Method not implemented.');
       mergeMap(res =>{
         JSON.stringify(res)
         this.data= this.api.getImage(res.name,res.capital).subscribe((res) => {
-          //console.log(res);
           JSON.stringify(this.getJsonValue)
           this.getJsonValue = res;
           for (let i = 0; i < 20; i++) {
@@ -81,10 +83,17 @@ throw new Error('Method not implemented.');
         }
 
         this.Degree = this.api.getWeather(res.capital).subscribe((gialo) => {
-          console.log(gialo);
+          console.log("GIAOLOOO")
           this.aigeamindi = gialo;
 
           this.RoundedTemp = Math.round(this.aigeamindi.main.temp);
+
+          var currentTime = new Date();
+          var offset = this.aigeamindi.timezone * 1000;
+          var timeInDesiredTimeZone = new Date(currentTime.getTime() + offset);
+          let time = timeInDesiredTimeZone.toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short',  hour: '2-digit', minute:'2-digit', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
+
+          
         })
         return of(res)
         

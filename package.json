@@ -25,6 +25,7 @@
     "@types/facebook-js-sdk": "^3.3.6",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
+    "moment-timezone": "^0.5.40",
     "ng2-search-filter": "^0.5.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
